@@ -29,7 +29,7 @@ void createElmt (pointer& pBaru){
 	pBaru = new pegawai;
 	cout<<"masukkan data pegawai"<<endl;
 	cout<<"Nama lengkap\t: ";cin.ignore();cin.getline(pBaru->nama,20);
-    cout<<"Divisi\t: ";cin.ignore();cin.getline(pBaru->divisi,10);
+    cout<<"Divisi\t: ";cin>>pBaru->divisi;
     cout<<"Gaji\t: ";cin>>pBaru->gaji;
 	pBaru->next = NULL;
 }
@@ -142,7 +142,7 @@ int main(){
         switch(pilihan){
         case 1:
             createElmt(p);
-            insertLast(Ma08,p);
+            insertFirst(Ma08,p);
         break;
         case 2:
             createElmt(p);
